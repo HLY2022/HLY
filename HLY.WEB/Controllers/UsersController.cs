@@ -41,7 +41,7 @@ namespace HLY.WEB.Controllers
 
             var users = _usersService.Authenticate(usersParam.Code, usersParam.Password);
             var tokenHandler = new JwtSecurityTokenHandler();
-            var TockenKey = _configuration["TockenKey"];
+           // var TockenKey = _configuration["TockenKey"];
             var key = Encoding.ASCII.GetBytes(_configuration["TockenKey"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
