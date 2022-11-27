@@ -3,3 +3,4 @@ obj
 Logs
 package-lock.json
 .*
+bin
