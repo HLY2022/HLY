@@ -1,4 +1,5 @@
-﻿using HLY.WEB.Data;
+﻿using Emgu.CV;
+using HLY.WEB.Data;
 using HLY.WEB.Data.IServices;
 using HLY.WEB.Data.Module;
 using HLY.WEB.Data.Module.Parameters;
@@ -13,7 +14,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+
+using Emgu.CV.Structure;
 
 namespace HLY.WEB.Controllers
 {
@@ -38,7 +42,6 @@ namespace HLY.WEB.Controllers
         [HttpPost("authenticate")]
         public IActionResult Authenticate([FromBody] UsersParam usersParam)
         {
-
             var users = _usersService.Authenticate(usersParam.Code, usersParam.Password);
             var tokenHandler = new JwtSecurityTokenHandler();
            // var TockenKey = _configuration["TockenKey"];
@@ -57,16 +60,11 @@ namespace HLY.WEB.Controllers
             return Ok(new
             {
                 OrgId = users.OrgId,
-                Code = users.Code,
                 Name = users.Name,
-                Email = users.Email,
-                ProfileImage = users.ProfileImage,
-                PasswordHash = users.PasswordHash,
-                Groups = users.Groups,
-                ApiKey = users.ApiKey,
-                Disabled = users.Disabled,
                 Mobile = users.Mobile,
-                OrgunitId = users.OrgunitId,
+                Email = users.Email,
+                Code = users.Code,
+                Password = users.PasswordHash,
                 Token = tokenString
             });
         }

@@ -9,6 +9,7 @@ import {history} from '../helpers/history';
 export interface UsersState {
     isLoading: boolean;
     users: Users;
+    userStorage:UserStorage;
 }
 
 export interface Users {
@@ -26,6 +27,15 @@ export interface Users {
     orgunitId: string;
     updatedat:string;
     createdat:string;
+}
+export interface UserStorage {
+    orgId:string;
+    name: string;
+    mobile:string;
+    email: string;
+    code: string;
+    password: string;
+    token: string;
 }
 
 // -----------------
@@ -98,7 +108,15 @@ const unloadedState: UsersState = { users:{    orgId:"1",
     orgunitId: "",
     updatedat:"",
     createdat:""
-}, isLoading: false };
+}, isLoading: false,userStorage:{
+    orgId:"1",
+    name: "",
+    mobile:"",
+    email: "",
+    code: "",
+    password: "",
+    token: "",
+} };
 
 export const reducer: Reducer<UsersState> = (state: UsersState | undefined, incomingAction: Action): UsersState => {
     if (state === undefined) {
@@ -110,7 +128,8 @@ export const reducer: Reducer<UsersState> = (state: UsersState | undefined, inco
         case 'REQUEST_WEATHER_USERS':
             return {
                 users: state.users,
-                isLoading: true
+                isLoading: true,
+                userStorage:state.userStorage
             };
         case 'RECEIVE_WEATHER_USERS':
             // Only accept the incoming data if it matches the most recent request. This ensures we correctly
@@ -118,7 +137,8 @@ export const reducer: Reducer<UsersState> = (state: UsersState | undefined, inco
             if (action.users.code === state.users.code) {
                 return {
                     users: action.users,
-                    isLoading: false
+                    isLoading: false,
+                    userStorage:state.userStorage
                 };
             }
             break;

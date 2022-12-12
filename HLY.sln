@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HLY.WEB", "HLY.WEB\HLY.WEB.csproj", "{29D6D10B-9544-4AF9-9343-31315A2F390E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.WEB", "HLY.WEB\HLY.WEB.csproj", "{29D6D10B-9544-4AF9-9343-31315A2F390E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.App", "HLY.App\HLY.App.csproj", "{73A622C0-FA5B-4508-B6F0-DD2CF81FC30B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.IdentityServer", "HLY.Identity\HLY.IdentityServer.csproj", "{241E9D27-C565-4245-BE06-C6FEE377B5F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.Infrastructure", "HLY.Infrastructure\HLY.Infrastructure.csproj", "{2FC928B9-F9B1-4AB0-A8A5-115FE9A5074E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.Mvc", "HLY.Mvc\HLY.Mvc.csproj", "{2E54735B-DA8F-4E82-B1D7-241234E58BD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.Repository", "HLY.Repository\HLY.Repository.csproj", "{6D495896-0518-48E5-93DA-6A550559207A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HLY.WebApi", "HLY.WebApi\HLY.WebApi.csproj", "{19FE0138-A6DD-4F12-8BB2-B0215D199720}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{29D6D10B-9544-4AF9-9343-31315A2F390E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D6D10B-9544-4AF9-9343-31315A2F390E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D6D10B-9544-4AF9-9343-31315A2F390E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A622C0-FA5B-4508-B6F0-DD2CF81FC30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A622C0-FA5B-4508-B6F0-DD2CF81FC30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A622C0-FA5B-4508-B6F0-DD2CF81FC30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A622C0-FA5B-4508-B6F0-DD2CF81FC30B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{241E9D27-C565-4245-BE06-C6FEE377B5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{241E9D27-C565-4245-BE06-C6FEE377B5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{241E9D27-C565-4245-BE06-C6FEE377B5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{241E9D27-C565-4245-BE06-C6FEE377B5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC928B9-F9B1-4AB0-A8A5-115FE9A5074E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC928B9-F9B1-4AB0-A8A5-115FE9A5074E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC928B9-F9B1-4AB0-A8A5-115FE9A5074E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC928B9-F9B1-4AB0-A8A5-115FE9A5074E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E54735B-DA8F-4E82-B1D7-241234E58BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E54735B-DA8F-4E82-B1D7-241234E58BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E54735B-DA8F-4E82-B1D7-241234E58BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E54735B-DA8F-4E82-B1D7-241234E58BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D495896-0518-48E5-93DA-6A550559207A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D495896-0518-48E5-93DA-6A550559207A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D495896-0518-48E5-93DA-6A550559207A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D495896-0518-48E5-93DA-6A550559207A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FE0138-A6DD-4F12-8BB2-B0215D199720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FE0138-A6DD-4F12-8BB2-B0215D199720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FE0138-A6DD-4F12-8BB2-B0215D199720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FE0138-A6DD-4F12-8BB2-B0215D199720}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
